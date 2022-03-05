@@ -39,6 +39,6 @@ app.delete('/api/entries/delete', urlencodedParser, function(req, res) {
     const position = req.body.position
     console.log(position)
     deleteEntry(position)
-    res.status(200).send("Entry baleted")
+    res.status(200).send("Entry deleted")
 })
 app.listen(port, () => console.log(`Server running on port ${port}`))
