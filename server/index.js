@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const bodyParser = require('body-parser')
-const { getEntries, addEntry } = require('./services')
+const { getEntries, addEntry, deleteEntry } = require('./services')
 const port = 3000
 /*To-Do for front-end requests
 
@@ -35,5 +35,10 @@ app.post('/api/entries/update', urlencodedParser, function(req, res) {
 // app.post(controller.createEntry)
 // app.delete(controller.deleteEntry)
 // app.put(controller.editEntry)
-
+app.delete('/api/entries/delete', urlencodedParser, function(req, res) {
+    const position = req.body.position
+    console.log(position)
+    deleteEntry(position)
+    res.status(200).send("Entry baleted")
+})
 app.listen(port, () => console.log(`Server running on port ${port}`))
