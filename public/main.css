@@ -1,8 +1,92 @@
-#background_img {
-    /* Get the image */
-    background-image: url("charlotte-austad-OlaWuOlX_OI-unsplash");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+                header {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    color: white;
+                    background-color: #2E3B18ff;
+                }
+                
+                nav {
+                    display: flex;
+                    flex-flow: row wrap;
+                    width: 20%;
+                    padding-right: 2rem;
+                    justify-content: flex-start;
+                    color: white;
+                    background-color: #97B352ff;
+                }
+                
+                nav a {
+                    color: #2E3B18ff
+                }
+                
+                nav ul li {
+                    text-align: center;
+                    margin: 2px;
+                    padding: 5px;
+                    list-style-type: none;
+                }
+                
+                footer {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-end;
+                    padding: 1%;
+                    /* height: 85%; */
+                    background-color: #2E3B18ff;
+                    margin: 15px;
+                }
+                
+                footer p {
+                    color: white;
+                    float: right;
+                }
+                
+                footer a {
+                    color: white
+                }
+                /* id styling */
+                
+                #bgimg {
+                    /* Get the image */
+                    background: url("charlotte-austad-OlaWuOlX_OI-unsplash.jpg") no-repeat center center fixed;
+                    ;
+                    min-height: 100%;
+                    width: 100%;
+                    height: auto;
+                    backdrop-filter: blur(3px);
+                    margin: 0;
+                }
+                /* Centering the image*/
+                
+                #journal {
+                    flex-flow: column wrap;
+                    width: 75%;
+                    background-color: #84956Bff;
+                }
+                
+                #submitButton {
+                    background-color: grey;
+                    width: 15%;
+                    margin-top: 7px;
+                    margin-left: 16px;
+                }
+                
+                #entry {
+                    display: flex;
+                    width: 75%;
+                    height: 150px;
+                    margin: 2%;
+                    padding: 1%;
+                }
+                
+                #entries {
+                    color: white;
+                    background-color: #A2AB7Aff;
+                    padding: 2rem;
+                }
+                
+                .flex-container {
+                    display: flex;
+                    flex-direction: row wrap;
+                }

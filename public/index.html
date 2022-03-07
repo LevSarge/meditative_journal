@@ -11,29 +11,38 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-    <nav>
-        <header>
-            <h1>Your Meditative Journal</h1>
-        </header>
-        <ul>
-            <li><a href="main.html">Journal</a></li>
-            <li>Breathe</li>
-            <li>Check In</li>
-        </ul>
-    </nav>
-    <main>
-        <div id="journal">
-            <ul id="entries">
-            </ul>
-            <input type="text" id="entry" maxlength="1500" placeholder="Today has been..." />
-            <button id="submitButton">Add Entry</button>
-        </div>
-        <footer>Photo credit to <a href="https://unsplash.com/photos/OlaWuOlX_OI">Charlotte Austad</a> via Unsplash</footer>
-    </main>
+<body id="bgimg">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js"></script>
-    <script src="./main.js" async defer></script>
+    <header>
+        <h1>Your Meditative Journal</h1>
+    </header>
+
+    <main>
+        <div class="flex-container">
+            <nav>
+                <ul>
+                    <li><a href="main.html ">Journal</a></li>
+                    <li><a href=" ">Breathe</a></li>
+                    <li><a href=" ">Check In</a></li>
+                </ul>
+            </nav>
+
+
+
+            <div id="journal">
+                <textarea id="entry" placeholder="Today was... "></textarea>
+                <button id="submitButton">Add Entry</button>
+                <ul id="entries">
+                </ul>
+            </div>
+
+        </div>
+        <footer>
+            <p>Photo credit to <a href="https://unsplash.com/photos/OlaWuOlX_OI ">Charlotte Austad</a> via Unsplash</p>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js "></script>
+    <script src="./main.js " async defer></script>
 </body>
 
 </html>

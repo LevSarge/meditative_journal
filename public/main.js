@@ -3,6 +3,7 @@
 
 
 async function grabEntries(){
+    console.log("grabEntries")
     const res = await axios.get('/api/entries/')
     console.log(res)
     return res.data
@@ -17,7 +18,8 @@ function addDeleteEventToButton(newDeleteElement, position){
     })
 }
 async function displayEntries(){
-    const entriesElement = document.querySelector("#entries")
+    console.log("displayEntries")
+    const entriesElement = document.getElementById('entries')
     const entries = await grabEntries()
     console.log(entries)
     entriesElement.innerHTML = "";
@@ -27,7 +29,7 @@ async function displayEntries(){
         const newDeleteElement = document.createElement("div")
 
         newEntryElement.textContent = entry
-        newDeleteElement.textContent = "X"
+        newDeleteElement.textContent = "Delete Entry"
         addDeleteEventToButton(newDeleteElement, position)
         newListElement.appendChild(newEntryElement)
         newListElement.appendChild(newDeleteElement)
@@ -37,19 +39,21 @@ async function displayEntries(){
 }
 
 async function uploadEntry(){
+    console.log("uploadEntry")
     const entry = document.querySelector("#entry").value
     await axios.post('/api/entries/update', {entry})
     await displayEntries();
 }
 
 function addEventListenerSubmit(){
-    const submitButton = document.querySelector("#submitButton")
+    console.log("addEventListenerSubmit")
+    const submitButton = document.getElementById('submitButton')
     submitButton.addEventListener("click", function (){
        Promise.resolve(uploadEntry())
     })
 }
 function ready(){
-    Promise.resolve(displayEntries())
+    displayEntries()
     addEventListenerSubmit()
 }
 document.addEventListener("DOMContentLoaded", ready)
